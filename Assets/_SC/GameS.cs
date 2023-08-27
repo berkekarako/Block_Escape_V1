@@ -15,6 +15,7 @@ namespace _SC
         public GameObject player;
         public GameObject obstaclePref;
         public TextMeshProUGUI scoreText;
+        public TextMeshProUGUI nextLvlText;
         public float numberOfColumns = 2; // Aralardaki Boşluk Sayısı
         public float shrinkageX;
 
@@ -104,10 +105,14 @@ namespace _SC
 
         public void TryNextLvl(int destroyObjNumber)
         {
+            float numberNextLvl = (float)destroyObjNumber * 100 / obstacles.Count;
+            nextLvlText.text = numberNextLvl.ToString(CultureInfo.InvariantCulture) + "%";
+            
             if (destroyObjNumber == obstacles.Count)
             {
                 ColumAdd();
                 destroyObstacle.destroyObjNumber = 0;
+                nextLvlText.text = "0%";
             }
         }
 
