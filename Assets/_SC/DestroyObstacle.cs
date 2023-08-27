@@ -5,9 +5,14 @@ namespace _SC
 {
     public class DestroyObstacle : MonoBehaviour
     {
+        public int destroyObjNumber;
+        public GameS games;
+            
         private void OnCollisionEnter2D(Collision2D other)
         {
-            Destroy(other.gameObject);
+            destroyObjNumber++;
+            other.gameObject.SetActive(false);
+            games.TryNextLvl(destroyObjNumber);
         }
     }
 }

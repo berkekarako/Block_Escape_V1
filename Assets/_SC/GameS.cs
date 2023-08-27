@@ -4,6 +4,7 @@ using System.Globalization;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using TMPro;
+using UnityEngine.Serialization;
 
 namespace _SC
 {
@@ -11,16 +12,26 @@ namespace _SC
     {
         public GameObject columnPref;
         public GameObject player;
-        public GameObject cubePref;
+        public GameObject obstaclePref;
         public TextMeshProUGUI scoreText;
         public float numberOfColumns = 2; // Aralardaki Boşluk Sayısı
         public float shrinkageX;
 
         public List<GameObject> columns;
+        public List<GameObject> obstacles;
+        public int obstacleNumberUsed = -1;
+        public DestroyObstacle destroyObstacle;
 
         private void Start()
         {
             player.transform.position = new Vector3(2.5f, -5.75f, 0);
+
+            for (int i = 0; i < 10; i++)
+            {
+                GameObject newObstacle = Instantiate(obstaclePref);
+                newObstacle.SetActive(false);
+                obstacles.Add(newObstacle);
+            }
         }
 
         public void ColumAdd()
@@ -45,6 +56,15 @@ namespace _SC
                 player.transform.position = new Vector3(5 + 10 / numberOfColumns / 2, -5.75f, 0);
             }
 
+            int totalObstacleNumber = obstacles.Count;
+            for (int i = 0; i < totalObstacleNumber; i++)
+            {
+                GameObject newObstacle = Instantiate(obstaclePref);
+                newObstacle.SetActive(false);
+                obstacles.Add(newObstacle);
+            }
+            obstacleNumberUsed = -1;
+
             GetComponent<ObstacleSettings>().MakeGameHarder();
 
             player.transform.localScale = new Vector3(10 / numberOfColumns / shrinkageX / 2,
@@ -55,19 +75,34 @@ namespace _SC
         
         public void SpawnCube()
         {
-            //int cubeNumber = Random.Range(1, (int)numberOfColumns); Şuan 1 tane spawnlanıyor yarın ayarlicam
-            
-            int cubeNumber = 1;
-            
-            while (cubeNumber != 0)
+            if (obstacles.Count > obstacleNumberUsed + 1)
             {
-                float randomNumber = Random.Range(0, (int)numberOfColumns);
-                
-                float targetVec = 10 / numberOfColumns / 2 + randomNumber * 10 / numberOfColumns;
-                
-                Instantiate(cubePref, new Vector3(targetVec, Random.Range(11f, 16f), 0), Quaternion.identity);
-                
-                cubeNumber--;
+                obstacleNumberUsed++;
+                var usedObstacle = obstacles[obstacleNumberUsed];
+                usedObstacle.SetActive(true);
+
+                //int cubeNumber = Random.Range(1, (int)numberOfColumns); Şuan 1 tane spawnlanıyor 
+                int cubeNumber = 1;
+
+                while (cubeNumber != 0)
+                {
+                    float randomNumber = Random.Range(0, (int)numberOfColumns);
+
+                    float targetVec = 10 / numberOfColumns / 2 + randomNumber * 10 / numberOfColumns;
+
+                    usedObstacle.transform.position = new Vector3(targetVec, Random.Range(11f, 20f), 0);
+
+                    cubeNumber--;
+                }
+            }
+        }
+
+        public void TryNextLvl(int destroyObjNumber)
+        {
+            if (destroyObjNumber == obstacles.Count)
+            {
+                ColumAdd();
+                destroyObstacle.destroyObjNumber = 0;
             }
         }
     }

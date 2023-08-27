@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &239259643
 RectTransform:
   m_ObjectHideFlags: 0
@@ -303,12 +303,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   columnPref: {fileID: 5996584438063173561, guid: d0b3d6346099a1440b6c917db04d8e19, type: 3}
   player: {fileID: 1115501347}
-  cubePref: {fileID: 3672180320208861341, guid: 71ba7a1d98859f34e8c2e2b7b7bdb4db, type: 3}
+  obstaclePref: {fileID: 3672180320208861341, guid: 71ba7a1d98859f34e8c2e2b7b7bdb4db, type: 3}
   scoreText: {fileID: 1186386786}
   numberOfColumns: 2
   shrinkageX: 0.25
   columns:
   - {fileID: 653660272}
+  obstacles: []
+  obstacleNumberUsed: -1
+  destroyObstacle: {fileID: 1631194393}
 --- !u!114 &331828779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,7 +574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &801444690
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1319,6 +1322,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d139d42f49b534c8c72d558c73a5c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyObjNumber: 0
+  games: {fileID: 331828778}
 --- !u!61 &1631194394
 BoxCollider2D:
   m_ObjectHideFlags: 0
