@@ -7,10 +7,11 @@ namespace _SC
 {
     public class GameS : MonoBehaviour
     {
-        public GameObject columnPref; 
-        public float numberOfColumns = 2; // Aralardaki Boşluk Sayısı
+        public GameObject columnPref;
         public GameObject player;
         public GameObject cubePref;
+        public float numberOfColumns = 2; // Aralardaki Boşluk Sayısı
+        public float shrinkageX;
 
         public List<GameObject> columns;
 
@@ -40,6 +41,11 @@ namespace _SC
             {
                 player.transform.position = new Vector3(5 + 10 / numberOfColumns / 2, -5.75f, 0);
             }
+
+            GetComponent<ObstacleSpawn>().MakeGameHarder();
+
+            player.transform.localScale = new Vector3(10 / numberOfColumns / shrinkageX / 2,
+                10 / numberOfColumns / shrinkageX / 2, 10 / numberOfColumns / shrinkageX / 2);
         }
         
         public void SpawnCube()
@@ -50,15 +56,11 @@ namespace _SC
             
             while (cubeNumber != 0)
             {
-                float randomNumber = Random.Range(1, (int)numberOfColumns * 2 - 1);
-                if (randomNumber % 2 == 0)
-                {
-                    randomNumber++;
-                }
+                float randomNumber = Random.Range(0, (int)numberOfColumns);
                 
-                float targetVec = 10 / numberOfColumns / 2 * randomNumber;
+                float targetVec = 10 / numberOfColumns / 2 + randomNumber * 10 / numberOfColumns;
                 
-                Instantiate(cubePref, new Vector3(targetVec, 0, 0), Quaternion.identity);
+                Instantiate(cubePref, new Vector3(targetVec, 11, 0), Quaternion.identity);
                 
                 cubeNumber--;
             }
