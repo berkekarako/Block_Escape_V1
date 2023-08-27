@@ -1,9 +1,8 @@
-using System;
 using UnityEngine;
 
 namespace _SC
 {
-    public class ObstacleSpawn : MonoBehaviour
+    public class ObstacleSettings : MonoBehaviour
     {
         public float obstacleSpawnTime;
         public float obstacleSpawnTimeX = 1.33f;

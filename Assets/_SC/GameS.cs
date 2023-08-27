@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using TMPro;
 
 namespace _SC
 {
@@ -10,6 +12,7 @@ namespace _SC
         public GameObject columnPref;
         public GameObject player;
         public GameObject cubePref;
+        public TextMeshProUGUI scoreText;
         public float numberOfColumns = 2; // Aralardaki Boşluk Sayısı
         public float shrinkageX;
 
@@ -42,10 +45,12 @@ namespace _SC
                 player.transform.position = new Vector3(5 + 10 / numberOfColumns / 2, -5.75f, 0);
             }
 
-            GetComponent<ObstacleSpawn>().MakeGameHarder();
+            GetComponent<ObstacleSettings>().MakeGameHarder();
 
             player.transform.localScale = new Vector3(10 / numberOfColumns / shrinkageX / 2,
                 10 / numberOfColumns / shrinkageX / 2, 10 / numberOfColumns / shrinkageX / 2);
+
+            scoreText.text = (numberOfColumns - 1).ToString(CultureInfo.InvariantCulture);
         }
         
         public void SpawnCube()
@@ -60,7 +65,7 @@ namespace _SC
                 
                 float targetVec = 10 / numberOfColumns / 2 + randomNumber * 10 / numberOfColumns;
                 
-                Instantiate(cubePref, new Vector3(targetVec, 11, 0), Quaternion.identity);
+                Instantiate(cubePref, new Vector3(targetVec, Random.Range(11f, 16f), 0), Quaternion.identity);
                 
                 cubeNumber--;
             }

@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace _SC
 {
-    public class PlayerMovement : MonoBehaviour
+    public class PlayerS : MonoBehaviour
     {
         private GameS _gameS;
         
@@ -13,10 +14,11 @@ namespace _SC
 
         public void Movement(float horizontal)
         {
+            if (horizontal == 0) return;
+            
             float numberOfColumns = _gameS.numberOfColumns;
             
             float targetVector = transform.position.x + 10 / numberOfColumns * horizontal;
-            print(targetVector);
 
             if (targetVector is > 0 and < 10)
             {
@@ -38,6 +40,19 @@ namespace _SC
                         transform.Translate(10 / numberOfColumns * -1, 0, 0);
                     }
                 }
+            }
+        }
+
+        private void Update()
+        {
+            Movement(Input.GetKeyDown(KeyCode.RightArrow) ? 1 : Input.GetKeyDown(KeyCode.LeftArrow) ? -1 : 0);
+        }
+
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            if (other.collider.CompareTag("Obstacle"))
+            {
+                SceneManager.LoadScene("Finish");
             }
         }
     }
