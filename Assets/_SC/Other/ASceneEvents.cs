@@ -24,5 +24,10 @@ namespace _SC.Other
         {
             obj.SetActive(false);
         }
+
+        public void ASetGameDifficulty(int num)
+        {
+            PlayerPrefs.SetInt("Difficulty", num);
+        }
     }
 }

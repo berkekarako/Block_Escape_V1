@@ -1,11 +1,9 @@
-using System;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using TMPro;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 namespace _SC
 {
@@ -27,10 +25,15 @@ namespace _SC
         public UnityEvent pauseEvent;
         public UnityEvent notPauseEvent;
 
+        public Camera mainCamera;
+        public LayerMask normalCullingMask;
+        public LayerMask pausedCullingMask;
+
         private void Start()
         {
+            Time.timeScale = 1;
             player.transform.position = new Vector3(2.5f, -5.75f, 0);
-
+            
             for (int i = 0; i < 10; i++)
             {
                 GameObject newObstacle = Instantiate(obstaclePref);
@@ -73,8 +76,8 @@ namespace _SC
             // Diğer Ayarlar
             GetComponent<ObstacleSettings>().MakeGameHarder();
 
-            player.transform.localScale = new Vector3(10 / numberOfColumns / shrinkageX / 2,
-                10 / numberOfColumns / shrinkageX / 2, 10 / numberOfColumns / shrinkageX / 2);
+            player.transform.localScale = new Vector3(10 / numberOfColumns / shrinkageX,
+                10 / numberOfColumns / shrinkageX, 10 / numberOfColumns / shrinkageX);
 
             scoreText.text = (numberOfColumns - 1).ToString(CultureInfo.InvariantCulture);
         }
@@ -122,11 +125,13 @@ namespace _SC
             {
                 Time.timeScale = 1;
                 notPauseEvent.Invoke();
+                mainCamera.cullingMask = normalCullingMask;
             }
             else
             {
                 Time.timeScale = 0;
                 pauseEvent.Invoke();
+                mainCamera.cullingMask = pausedCullingMask;
             }
         }
     }

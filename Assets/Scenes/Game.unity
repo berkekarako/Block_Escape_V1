@@ -308,7 +308,7 @@ MonoBehaviour:
   scoreText: {fileID: 1186386786}
   nextLvlText: {fileID: 1951560352}
   numberOfColumns: 2
-  shrinkageX: 0.25
+  shrinkageX: 0.5
   columns:
   - {fileID: 653660272}
   obstacles: []
@@ -368,6 +368,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  mainCamera: {fileID: 519420031}
+  normalCullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  pausedCullingMask:
+    serializedVersion: 2
+    m_Bits: 55
 --- !u!114 &331828779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,7 +388,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleSpawnTime: 1
-  obstacleSpawnTimeX: 1.5
 --- !u!114 &331828780
 MonoBehaviour:
   m_ObjectHideFlags: 0

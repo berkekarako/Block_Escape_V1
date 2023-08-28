@@ -5,14 +5,16 @@ namespace _SC
     public class ObstacleSettings : MonoBehaviour
     {
         public float obstacleSpawnTime;
-        public float obstacleSpawnTimeX = 1.33f;
         
         private GameS _gameS;
         private float _x;
+
+        private int _difficultyNumber;
         
         private void Start()
         {
             _gameS = GameObject.FindWithTag("GameS").GetComponent<GameS>();
+            _difficultyNumber = PlayerPrefs.GetInt("Difficulty");
         }
 
         private void Update()
@@ -28,7 +30,20 @@ namespace _SC
 
         public void MakeGameHarder()
         {
-            obstacleSpawnTime /= obstacleSpawnTimeX; // Her seferinde 1.33 kat hızlancak
+            switch (_difficultyNumber)
+            {
+                case 0:
+                    obstacleSpawnTime /= 1.375f;
+                    break;
+                
+                case 1:
+                    obstacleSpawnTime /= 1.5f;
+                    break;
+                
+                case 2:
+                    obstacleSpawnTime /= 1.63f;
+                    break;
+            }
         }
     }
 }
