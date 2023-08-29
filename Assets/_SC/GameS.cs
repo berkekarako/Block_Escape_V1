@@ -4,6 +4,8 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 using TMPro;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 namespace _SC
 {
@@ -12,10 +14,14 @@ namespace _SC
         public GameObject columnPref;
         public GameObject player;
         public GameObject obstaclePref;
-        public TextMeshProUGUI scoreText;
-        public TextMeshProUGUI nextLvlText;
         public float numberOfColumns = 2; // Aralardaki Boşluk Sayısı
         public float shrinkageX;
+        
+        public TextMeshProUGUI scoreText;
+        public Image nextLvlImage;
+        public List<Sprite> uploadSprites;
+        public Sprite defaultUploadSprites;
+        public int nextLvlNumber = 1;
 
         public List<GameObject> columns;
         public List<GameObject> obstacles;
@@ -51,7 +57,7 @@ namespace _SC
             
             for (int i = 0; i < numberOfColumns - 1; i++) // Kolon Düzeneleme
             {
-                columns[i].transform.position = new Vector3(s + 10/numberOfColumns, 3.5f, 0);
+                columns[i].transform.position = new Vector3(s + 10/numberOfColumns, 2.15f, 0);
                 s += 10 / numberOfColumns;
             }
 
@@ -90,32 +96,31 @@ namespace _SC
                 var usedObstacle = obstacles[obstacleNumberUsed];
                 usedObstacle.SetActive(true);
 
-                //int cubeNumber = Random.Range(1, (int)numberOfColumns); Şuan 1 tane spawnlanıyor 
-                int cubeNumber = 1;
+                float randomNumber = Random.Range(0, (int)numberOfColumns);
 
-                while (cubeNumber != 0)
-                {
-                    float randomNumber = Random.Range(0, (int)numberOfColumns);
+                float targetVec = 10 / numberOfColumns / 2 + randomNumber * 10 / numberOfColumns;
 
-                    float targetVec = 10 / numberOfColumns / 2 + randomNumber * 10 / numberOfColumns;
-
-                    usedObstacle.transform.position = new Vector3(targetVec, Random.Range(11f, 20f), 0);
-
-                    cubeNumber--;
-                }
+                usedObstacle.transform.position = new Vector3(targetVec, Random.Range(11f, 20f), 0);
             }
         }
-
+        
         public void TryNextLvl(int destroyObjNumber)
         {
             float numberNextLvl = (float)destroyObjNumber * 100 / obstacles.Count;
-            nextLvlText.text = numberNextLvl.ToString(CultureInfo.InvariantCulture) + "%";
+            //nextLvlText.text = numberNextLvl.ToString(CultureInfo.InvariantCulture) + "%";
+
+            if(numberNextLvl >= nextLvlNumber * 10)
+            {
+                nextLvlImage.sprite = uploadSprites[nextLvlNumber - 1];
+                nextLvlNumber++;
+            }
             
             if (destroyObjNumber == obstacles.Count)
             {
                 ColumAdd();
                 destroyObstacle.destroyObjNumber = 0;
-                nextLvlText.text = "0%";
+                nextLvlNumber = 1;
+                nextLvlImage.sprite = defaultUploadSprites;
             }
         }
 
