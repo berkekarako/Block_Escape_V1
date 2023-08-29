@@ -533,14 +533,6 @@ MonoBehaviour:
     m_Bits: 55
   enemyPref: {fileID: 3672180320208861341, guid: 71ba7a1d98859f34e8c2e2b7b7bdb4db, type: 3}
   enemySprites:
-  - {fileID: 1611470393, guid: 2805b38f31374fa4aa0bda15c471b788, type: 3}
-  - {fileID: 791252811, guid: 2805b38f31374fa4aa0bda15c471b788, type: 3}
-  - {fileID: 227957986, guid: 2805b38f31374fa4aa0bda15c471b788, type: 3}
-  - {fileID: -1988343996, guid: 2805b38f31374fa4aa0bda15c471b788, type: 3}
-  - {fileID: 36921052, guid: 2805b38f31374fa4aa0bda15c471b788, type: 3}
-  - {fileID: 996883435, guid: 2805b38f31374fa4aa0bda15c471b788, type: 3}
-  - {fileID: -1399641543, guid: 2805b38f31374fa4aa0bda15c471b788, type: 3}
-  - {fileID: -1702999867, guid: 2805b38f31374fa4aa0bda15c471b788, type: 3}
   - {fileID: -762135829, guid: f16fa6d3ae9543b4c954f322ab1c4598, type: 3}
   - {fileID: -1398854628, guid: f16fa6d3ae9543b4c954f322ab1c4598, type: 3}
   - {fileID: 1705241648, guid: f16fa6d3ae9543b4c954f322ab1c4598, type: 3}

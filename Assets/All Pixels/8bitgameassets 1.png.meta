@@ -128,7 +128,7 @@ TextureImporter:
         serializedVersion: 2
         x: 16
         y: 368
-        width: 56
+        width: 110
         height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -139,27 +139,6 @@ TextureImporter:
       bones: []
       spriteID: c3fb24cc435993e4c9da1d41fae21231
       internalID: 216004059
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 8bitgameassets 1_1
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 368
-        width: 51
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ad07a8a3a93d164788fb0217c353bc8
-      internalID: -1628009182
       vertices: []
       indices: 
       edges: []

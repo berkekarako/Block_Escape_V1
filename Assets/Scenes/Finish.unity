@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 570207301, guid: c9a1e64f6eeb70344bcf2f000c66de54, type: 3}
+  m_Sprite: {fileID: 216004059, guid: f16fa6d3ae9543b4c954f322ab1c4598, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -656933928, guid: 8574636d554e5ff44853f7b332604e3d, type: 3}
+  m_Sprite: {fileID: 1854426958, guid: f16fa6d3ae9543b4c954f322ab1c4598, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -653,6 +653,7 @@ GameObject:
   - component: {fileID: 909190806}
   - component: {fileID: 909190805}
   - component: {fileID: 909190804}
+  - component: {fileID: 909190807}
   m_Layer: 5
   m_Name: Death
   m_TagString: Untagged
@@ -739,6 +740,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 909190802}
   m_CullTransparentMesh: 1
+--- !u!114 &909190807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909190802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691a72610901ee84cb43fdfdd2e4d9d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1063099339
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,7 +787,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.6549, y: 0}
+  m_AnchoredPosition: {x: 0.6549, y: 5}
   m_SizeDelta: {x: 315.9398, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1063099341
@@ -797,7 +810,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -415667176, guid: 8574636d554e5ff44853f7b332604e3d, type: 3}
+  m_Sprite: {fileID: 426416843, guid: f16fa6d3ae9543b4c954f322ab1c4598, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
