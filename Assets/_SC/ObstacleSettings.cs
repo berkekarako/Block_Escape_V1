@@ -24,7 +24,7 @@ namespace _SC
             if (_x >= obstacleSpawnTime)
             {
                 _x = 0;
-                _gameS.SpawnCube();
+                _gameS.SpawnEnemy();
             }
         }
 

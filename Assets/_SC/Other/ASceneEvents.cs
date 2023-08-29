@@ -5,6 +5,8 @@ namespace _SC.Other
 {
     public class ASceneEvents : MonoBehaviour
     {
+        public AudioSource audioSource;
+        
         public void ASceneLoad(string sceneName)
         {
             SceneManager.LoadScene(sceneName);
@@ -28,6 +30,12 @@ namespace _SC.Other
         public void ASetGameDifficulty(int num)
         {
             PlayerPrefs.SetInt("Difficulty", num);
+        }
+        
+        public void APlayMomentMusic(AudioClip audioClip)
+        {
+            audioSource.clip = audioClip;
+            audioSource.Play();
         }
     }
 }

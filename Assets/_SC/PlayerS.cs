@@ -1,10 +1,15 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace _SC
 {
     public class PlayerS : MonoBehaviour
     {
+        public GameObject normalMenu;
+        public UnityEvent deathSound;
+        
         private GameS _gameS;
         
         private void Start()
@@ -52,11 +57,19 @@ namespace _SC
         {
             if (other.collider.CompareTag("Obstacle"))
             {
-                /*var dataL = GameObject.FindWithTag("GameS").GetComponent<DataL>();
-                dataL.LoadPlayerLvl((int)_gameS.numberOfColumns - 1, int.Parse(_gameS.nextLvlText.text.Split("%")[0]));*/
+                GetComponent<Animator>().SetTrigger("death");
+                normalMenu.SetActive(false);
                 Time.timeScale = 0;
-                SceneManager.LoadScene("Finish");
+                Camera.main.GetComponent<AudioSource>().mute = true;
+                deathSound.Invoke();
+                StartCoroutine(LoseGame());
             }
+        }
+
+        private IEnumerator LoseGame()
+        {
+            yield return new WaitForSecondsRealtime(1.5f);
+            SceneManager.LoadScene("Finish");
         }
     }
 }

@@ -1,0 +1,854 @@
+fileFormatVersion: 2
+guid: f16fa6d3ae9543b4c954f322ab1c4598
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 8bitgameassets 1_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 368
+        width: 56
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3fb24cc435993e4c9da1d41fae21231
+      internalID: 216004059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 368
+        width: 51
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad07a8a3a93d164788fb0217c353bc8
+      internalID: -1628009182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 368
+        width: 50
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7b3a0cac2ecf544881d9d26452af8e
+      internalID: -493744434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_3
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 368
+        width: 100
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f9de839633cfd46ad32c52c2029004
+      internalID: 396523282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 336
+        width: 64
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5844ce68ecfd4d543a97360bb2de8a1f
+      internalID: 426416843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 336
+        width: 82
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e72a72609e1ed4781a6d05e62b7e8e
+      internalID: 1987993888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_6
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 336
+        width: 101
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2f61e00979a2242a25c9799763afa2
+      internalID: 1854426958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_7
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 304
+        width: 83
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18c93e9b0cf5cc4f8b2685887a1298d
+      internalID: 1088290780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_8
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 304
+        width: 55
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aee29f006e96c84baf6280498f7cb80
+      internalID: 1716650510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_9
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 304
+        width: 101
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af437df77cb8ff842b8ef6a9b8a688a2
+      internalID: -872932884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 272
+        width: 43
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c4d2913ed78f04e90f0b1b25ada164
+      internalID: -756352712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_11
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 254
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd9a4ed0d962af14cae0cf695df97dcc
+      internalID: -762135829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_12
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 254
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa8abd5dbbd73945b0f344f9c53d669
+      internalID: -1398854628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_13
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 254
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae82d312135391a4fb2cf2648de1c4f6
+      internalID: 1705241648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_14
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 254
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3830fc31762b7304fb3b97346cbee5af
+      internalID: 510275765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 154
+        width: 5
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a4a7a1f9ef6d64cb73bd3b1124b3ba
+      internalID: -736608446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_18
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 222
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee854bdae691084cbf26732bac894e6
+      internalID: 993501197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_19
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 222
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2880148179439a44dbf31a00d19a880c
+      internalID: -296325479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_20
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 222
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1c9210fa120de4d8f446609874b2a3
+      internalID: -833946494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_21
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 222
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3651efb58406e4380a110e30234766
+      internalID: -2039651137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_23
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 153
+        width: 6
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4d397e9aaf2204e89812c4493c57c4
+      internalID: 1114113841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_42
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 132
+        width: 92
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67fa507ac97085246a7519a1057dff4a
+      internalID: -178550788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_43
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 100
+        width: 92
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de692e1b18bb794b8a9b2b63b115284
+      internalID: 2041918925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_47
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 71
+        width: 77
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95600a9f2a29c174d9912117604d0744
+      internalID: 1759871784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_48
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 62
+        width: 77
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056e8d9a77a7d5f4baa723d9185eb106
+      internalID: -849638319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_49
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 52
+        width: 77
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bbad397a3f88f5429dd6d8a590dc552
+      internalID: -1893864992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_50
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 32
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fab9261e43918d4ea97fa995922a4d1
+      internalID: 1325710781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_51
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 32
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d890842f91912fd478fea5c34d2ad673
+      internalID: 263841631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_52
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 32
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e41a5b7f76d9f2e47a788a2983095f80
+      internalID: -542154742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_53
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 32
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce9105e6fc3cba4f9707e4f7e37239f
+      internalID: -516607322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8bitgameassets 1_54
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 20
+        width: 85
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 941b1962d362cae44bf364dfc50af868
+      internalID: -1698773904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      8bitgameassets 1_0: 216004059
+      8bitgameassets 1_1: -1628009182
+      8bitgameassets 1_10: -756352712
+      8bitgameassets 1_11: -762135829
+      8bitgameassets 1_12: -1398854628
+      8bitgameassets 1_13: 1705241648
+      8bitgameassets 1_14: 510275765
+      8bitgameassets 1_15: -1174840484
+      8bitgameassets 1_16: 1637262099
+      8bitgameassets 1_17: -736608446
+      8bitgameassets 1_18: 993501197
+      8bitgameassets 1_19: -296325479
+      8bitgameassets 1_2: -493744434
+      8bitgameassets 1_20: -833946494
+      8bitgameassets 1_21: -2039651137
+      8bitgameassets 1_22: 558365761
+      8bitgameassets 1_23: 1114113841
+      8bitgameassets 1_24: -767661564
+      8bitgameassets 1_25: 854011152
+      8bitgameassets 1_26: 1853254766
+      8bitgameassets 1_27: -1997018968
+      8bitgameassets 1_28: -266737297
+      8bitgameassets 1_29: 1720735468
+      8bitgameassets 1_3: 396523282
+      8bitgameassets 1_30: 770704157
+      8bitgameassets 1_31: 1412675644
+      8bitgameassets 1_32: 1144546622
+      8bitgameassets 1_33: -375795442
+      8bitgameassets 1_34: 179628051
+      8bitgameassets 1_35: -482024900
+      8bitgameassets 1_36: -846974233
+      8bitgameassets 1_37: 1773773644
+      8bitgameassets 1_38: -110481142
+      8bitgameassets 1_39: 1338732161
+      8bitgameassets 1_4: 426416843
+      8bitgameassets 1_40: 1645396584
+      8bitgameassets 1_41: 814981556
+      8bitgameassets 1_42: -178550788
+      8bitgameassets 1_43: 2041918925
+      8bitgameassets 1_44: -1710873663
+      8bitgameassets 1_45: -522591382
+      8bitgameassets 1_46: 135767339
+      8bitgameassets 1_47: 1759871784
+      8bitgameassets 1_48: -849638319
+      8bitgameassets 1_49: -1893864992
+      8bitgameassets 1_5: 1987993888
+      8bitgameassets 1_50: 1325710781
+      8bitgameassets 1_51: 263841631
+      8bitgameassets 1_52: -542154742
+      8bitgameassets 1_53: -516607322
+      8bitgameassets 1_54: -1698773904
+      8bitgameassets 1_55: 1391588952
+      8bitgameassets 1_56: -206488678
+      8bitgameassets 1_57: -850294390
+      8bitgameassets 1_58: 1060502141
+      8bitgameassets 1_59: -193494556
+      8bitgameassets 1_6: 1854426958
+      8bitgameassets 1_60: -1546510109
+      8bitgameassets 1_61: -1612046551
+      8bitgameassets 1_62: -664878182
+      8bitgameassets 1_7: 1088290780
+      8bitgameassets 1_8: 1716650510
+      8bitgameassets 1_9: -872932884
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
