@@ -57,6 +57,7 @@ namespace _SC
         {
             if (other.collider.CompareTag("Obstacle"))
             {
+                PlayerPrefs.SetInt("Lvl", (int)_gameS.numberOfColumns - 1);
                 GetComponent<Animator>().SetTrigger("death");
                 normalMenu.SetActive(false);
                 Time.timeScale = 0;
@@ -70,6 +71,7 @@ namespace _SC
         {
             yield return new WaitForSecondsRealtime(1.5f);
             SceneManager.LoadScene("Finish");
+            Time.timeScale = 1f;
         }
     }
 }
