@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2653516454065320981}
   - component: {fileID: 2955198468502478219}
   - component: {fileID: 3204631340002316810}
+  - component: {fileID: 2986927645972885245}
   m_Layer: 8
   m_Name: Engel
   m_TagString: Obstacle
@@ -27,12 +28,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3672180320208861341}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.1118627, y: -1.6528727, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2653516454065320981
 SpriteRenderer:
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1280172898, guid: 8574636d554e5ff44853f7b332604e3d, type: 3}
+  m_Sprite: {fileID: -1806174300, guid: 20cb0894837f24d4d9bfd6c702f0f9af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,18 +119,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00008948892, y: -0.003150839}
+  m_Offset: {x: -0.0021556616, y: 0.003736347}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.18, y: 0.09}
+    oldSize: {x: 0.44, y: 0.32}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.18299623, y: 0.1829414}
+  m_Size: {x: 0.44608724, y: 0.3206854}
   m_EdgeRadius: 0
 --- !u!50 &3204631340002316810
 Rigidbody2D:
@@ -158,3 +159,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!114 &2986927645972885245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3672180320208861341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d8736af4e5af5343abe716dd06ab1c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrnkingTime: 1.25

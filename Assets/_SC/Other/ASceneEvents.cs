@@ -7,6 +7,11 @@ namespace _SC.Other
     {
         public AudioSource audioSource;
         
+        void Start()
+        {
+            Application.targetFrameRate = 120;
+        }
+        
         public void ASceneLoad(string sceneName)
         {
             SceneManager.LoadScene(sceneName);

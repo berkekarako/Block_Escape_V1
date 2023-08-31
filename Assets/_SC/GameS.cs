@@ -3,9 +3,7 @@ using System.Globalization;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using TMPro;
-using UnityEngine.Events;
 using UnityEngine.Serialization;
-using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
 
 namespace _SC
@@ -23,13 +21,16 @@ namespace _SC
         public List<Sprite> uploadSprites;
         public Sprite defaultUploadSprites;
         public int nextLvlNumber = 1;
+        public float nextLvlPercent;
 
         [Header("Objects")]
         public List<GameObject> columns;
-        public List<GameObject> obstacles;
-        public int obstacleNumberUsed = -1;
         public DestroyObstacle destroyObstacle;
-
+        public List<GameObject> activeEnemy;
+        public List<GameObject> notActiveEnemy;
+        public float maxEnemyNumber = 10;
+        public float usedEnemyNumber;
+        
         [Header("Camera")]
         public Camera mainCamera;
         public LayerMask normalCullingMask;
@@ -43,12 +44,12 @@ namespace _SC
         {
             Time.timeScale = 1;
             player.transform.position = new Vector3(2.5f, -5.625f, 0);
-            
-            for (int i = 0; i < 10; i++)
+
+            for (int i = 0; i < 125; i++)
             {
-                GameObject newObstacle = Instantiate(enemyPref);
-                newObstacle.SetActive(false);
-                obstacles.Add(newObstacle);
+                GameObject newEnemy = Instantiate(enemyPref);
+                notActiveEnemy.Add(newEnemy);
+                newEnemy.SetActive(false);
             }
         }
 
@@ -67,38 +68,34 @@ namespace _SC
 
             if (numberOfColumns % 2 != 0) // Kolon eklenince karakteri ışınlama
             {
-                player.transform.position = new Vector3(5, -5.625f, 0);
+                player.transform.position = new Vector3(5, -5.5f, 0);
             }
             else
             {
-                player.transform.position = new Vector3(5 + 10 / numberOfColumns / 2, -5.625f, 0);
+                player.transform.position = new Vector3(5 + 10 / numberOfColumns / 2, -5.5f, 0);
             }
-
-            int totalObstacleNumber = obstacles.Count;
-            for (int i = 0; i < totalObstacleNumber; i++) // Engel Çoğaltma
-            {
-                GameObject newObstacle = Instantiate(enemyPref);
-                newObstacle.SetActive(false);
-                obstacles.Add(newObstacle);
-            }
-            obstacleNumberUsed = -1;
+            
+            maxEnemyNumber *= 1.75f;
+            usedEnemyNumber = 0;
 
             // Diğer Ayarlar
             GetComponent<ObstacleSettings>().MakeGameHarder();
 
-            player.transform.localScale = new Vector3(10 / numberOfColumns / shrinkageX,
-                10 / numberOfColumns / shrinkageX, 10 / numberOfColumns / shrinkageX);
+            player.transform.localScale /= shrinkageX;
 
             scoreText.text = (numberOfColumns - 1).ToString(CultureInfo.InvariantCulture);
         }
         
         public void SpawnEnemy()
         {
-            if (obstacles.Count > obstacleNumberUsed + 1)
+            if ((int)maxEnemyNumber >= usedEnemyNumber + 1)
             {
-                obstacleNumberUsed++;
-                var usedObstacle = obstacles[obstacleNumberUsed];
+                usedEnemyNumber++;
+                GameObject usedObstacle = notActiveEnemy[0];
                 usedObstacle.SetActive(true);
+                
+                notActiveEnemy.RemoveAt(0);
+                activeEnemy.Add(usedObstacle);
 
                 usedObstacle.GetComponent<SpriteRenderer>().sprite = enemySprites[Random.Range(0, enemySprites.Count - 1)];
 
@@ -112,21 +109,27 @@ namespace _SC
         
         public void TryNextLvl(int destroyObjNumber)
         {
-            float numberNextLvl = (float)destroyObjNumber * 100 / obstacles.Count;
+            nextLvlPercent = (float)destroyObjNumber * 100 / maxEnemyNumber;
             //nextLvlText.text = numberNextLvl.ToString(CultureInfo.InvariantCulture) + "%";
+            print(nextLvlPercent);
 
-            if(numberNextLvl >= nextLvlNumber * 10)
+            if(nextLvlPercent >= nextLvlNumber * 10)
             {
                 nextLvlImage.sprite = uploadSprites[nextLvlNumber - 1];
                 nextLvlNumber++;
             }
             
-            if (destroyObjNumber == obstacles.Count)
+            if (destroyObjNumber == (int)maxEnemyNumber)
             {
                 ColumAdd();
                 destroyObstacle.destroyObjNumber = 0;
                 nextLvlNumber = 1;
                 nextLvlImage.sprite = defaultUploadSprites;
+
+                for (int j = 0; j < notActiveEnemy.Count; j++)
+                {
+                    notActiveEnemy[j].GetComponent<Skeleton>().Skeletonn();
+                }
             }
         }
 

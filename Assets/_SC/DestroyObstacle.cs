@@ -12,6 +12,10 @@ namespace _SC
         {
             destroyObjNumber++;
             other.gameObject.SetActive(false);
+            
+            games.notActiveEnemy.Add(other.gameObject);
+            games.activeEnemy.Remove(other.gameObject);
+            
             games.TryNextLvl(destroyObjNumber);
         }
     }

@@ -1,3 +1,4 @@
+using System.Globalization;
 using TMPro;
 using UnityEngine;
 
@@ -5,11 +6,12 @@ namespace _SC.Other
 {
     public class Finish : MonoBehaviour
     {
-        public TextMeshProUGUI score;
+        public TextMeshProUGUI scoreText;
         
         void Start()
         {
-            score.text = PlayerPrefs.GetInt("Lvl").ToString();
+            float score =  (PlayerPrefs.GetInt("Lvl") * 100 + PlayerPrefs.GetFloat("LvlNext")) - 100;
+            scoreText.text = score.ToString(CultureInfo.InvariantCulture);
         }
     }
 }

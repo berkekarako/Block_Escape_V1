@@ -1,3 +1,5 @@
+using System;
+using TMPro;
 using UnityEngine;
 
 namespace _SC
@@ -10,6 +12,8 @@ namespace _SC
         private float _x;
 
         private int _difficultyNumber;
+        public TextMeshProUGUI fpsText;
+        public TextMeshProUGUI fpsText2;
         
         private void Start()
         {
@@ -26,6 +30,9 @@ namespace _SC
                 _x = 0;
                 _gameS.SpawnEnemy();
             }
+            
+            fpsText.text = (1 / Time.deltaTime).ToString("F0");
+            fpsText2.text = _gameS.activeEnemy.Count.ToString();
         }
 
         public void MakeGameHarder()
@@ -33,15 +40,15 @@ namespace _SC
             switch (_difficultyNumber)
             {
                 case 0:
-                    obstacleSpawnTime /= 1.375f;
+                    obstacleSpawnTime /= 1.25f;
                     break;
                 
                 case 1:
-                    obstacleSpawnTime /= 1.5f;
+                    obstacleSpawnTime /= 1.325f;
                     break;
                 
                 case 2:
-                    obstacleSpawnTime /= 1.63f;
+                    obstacleSpawnTime /= 1.475f;
                     break;
             }
         }

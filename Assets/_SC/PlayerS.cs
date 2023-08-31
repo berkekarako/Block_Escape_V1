@@ -58,6 +58,8 @@ namespace _SC
             if (other.collider.CompareTag("Obstacle"))
             {
                 PlayerPrefs.SetInt("Lvl", (int)_gameS.numberOfColumns - 1);
+                PlayerPrefs.SetFloat("LvlNext", _gameS.nextLvlPercent);
+                
                 GetComponent<Animator>().SetTrigger("death");
                 normalMenu.SetActive(false);
                 Time.timeScale = 0;
