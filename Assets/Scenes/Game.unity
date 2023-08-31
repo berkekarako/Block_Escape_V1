@@ -181,12 +181,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1963548075, guid: 9bd18e2cfc2cfe84d81154a8930320a9, type: 3}
+  m_Sprite: {fileID: -68550644, guid: ca047411e6374cc499c060dc7ecb8994, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 11, y: 0.19}
+  m_Size: {x: 11, y: 0.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1266,7 +1266,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1963548075, guid: 9bd18e2cfc2cfe84d81154a8930320a9, type: 3}
+  m_Sprite: {fileID: -68550644, guid: ca047411e6374cc499c060dc7ecb8994, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2204,14 +2204,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5199228744576719721, guid: d0b3d6346099a1440b6c917db04d8e19, type: 3}
-      propertyPath: m_Size.y
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 5199228744576719721, guid: d0b3d6346099a1440b6c917db04d8e19, type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
-      objectReference: {fileID: 0}
     - target: {fileID: 5996584438063173561, guid: d0b3d6346099a1440b6c917db04d8e19, type: 3}
       propertyPath: m_Name
       value: Duvar
