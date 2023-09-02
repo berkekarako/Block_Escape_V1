@@ -9,9 +9,10 @@ namespace _SC
     {
         public GameObject prize;
         public bool playerHasBeenPrize;
+        public float harderX;
         public GameS gameS;
         
-        public int maxPrizeSpawnRate;
+        public float maxPrizeSpawnRate = 1000000;
             
         public void ChangeRate(int maxRate)
         {
@@ -27,7 +28,7 @@ namespace _SC
         {
             if (!playerHasBeenPrize)
             {
-                if (Random.Range(0, maxPrizeSpawnRate) == 1)
+                if (Random.Range(0, (int)maxPrizeSpawnRate) == 1)
                 {
                     float randomNumber = Random.Range(0, (int)gameS.numberOfColumns);
 
@@ -38,6 +39,11 @@ namespace _SC
             }
             
             Invoke(nameof(TrySpawnPrize), 1);
+        }
+        
+        public void MakeGameHarder()
+        {
+            maxPrizeSpawnRate /= harderX;
         }
     }
 }

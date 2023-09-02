@@ -16,11 +16,16 @@ namespace _SC
             }
             
             if(!other.gameObject.CompareTag("Obstacle")) return;
+            EnemyHit(other.gameObject);
+        }
+        
+        public void EnemyHit(GameObject enemy)
+        {
             destroyObjNumber++;
-            other.gameObject.SetActive(false);
+            enemy.SetActive(false);
             
-            games.notActiveEnemy.Add(other.gameObject);
-            games.activeEnemy.Remove(other.gameObject);
+            games.notActiveEnemy.Add(enemy);
+            games.activeEnemy.Remove(enemy);
             
             games.TryNextLvl(destroyObjNumber);
         }

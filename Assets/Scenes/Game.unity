@@ -579,8 +579,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prize: {fileID: 3672180320208861341, guid: 9ed3d0dd0d66c0147a98b3f14cac4483, type: 3}
   playerHasBeenPrize: 0
+  harderX: 25
   gameS: {fileID: 331828778}
-  maxPrizeSpawnRate: 10
+  maxPrizeSpawnRate: 1000000
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,7 +688,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 573cc14cad6518349a4a3cde176ea2a0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: -1
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -1460,8 +1461,8 @@ GameObject:
   - component: {fileID: 1115501349}
   - component: {fileID: 1115501348}
   - component: {fileID: 1115501351}
-  - component: {fileID: 1115501352}
   - component: {fileID: 1115501353}
+  - component: {fileID: 1115501352}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1543,7 +1544,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115501347}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1609,6 +1610,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  destroyObstacle: {fileID: 1631194393}
 --- !u!95 &1115501353
 Animator:
   serializedVersion: 5

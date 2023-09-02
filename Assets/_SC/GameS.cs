@@ -80,6 +80,7 @@ namespace _SC
 
             // Diğer Ayarlar
             GetComponent<ObstacleSettings>().MakeGameHarder();
+            GetComponent<PrizeSpawn>().MakeGameHarder();
 
             player.transform.localScale /= shrinkageX;
 

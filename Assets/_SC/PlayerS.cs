@@ -10,6 +10,8 @@ namespace _SC
         public GameObject normalMenu;
         public UnityEvent deathSound;
         
+        public DestroyObstacle destroyObstacle;
+        
         private GameS _gameS;
         
         private void Start()
@@ -57,15 +59,24 @@ namespace _SC
         {
             if (other.collider.CompareTag("Obstacle"))
             {
-                PlayerPrefs.SetInt("Lvl", (int)_gameS.numberOfColumns - 1);
-                PlayerPrefs.SetFloat("LvlNext", _gameS.nextLvlPercent);
-                
-                GetComponent<Animator>().SetTrigger("death");
-                normalMenu.SetActive(false);
-                Time.timeScale = 0;
-                Camera.main.GetComponent<AudioSource>().mute = true;
-                deathSound.Invoke();
-                StartCoroutine(LoseGame());
+                if (!_gameS.gameObject.GetComponent<PrizeSpawn>().playerHasBeenPrize)
+                {
+                    PlayerPrefs.SetInt("Lvl", (int)_gameS.numberOfColumns - 1);
+                    PlayerPrefs.SetFloat("LvlNext", _gameS.nextLvlPercent);
+
+                    GetComponent<Animator>().SetTrigger("death");
+                    normalMenu.SetActive(false);
+                    Time.timeScale = 0;
+                    Camera.main.GetComponent<AudioSource>().mute = true;
+                    deathSound.Invoke();
+                    StartCoroutine(LoseGame());
+                }
+                else
+                {
+                    _gameS.gameObject.GetComponent<PrizeSpawn>().playerHasBeenPrize = false;
+                    destroyObstacle.EnemyHit(other.gameObject);
+                    Destroy(other.gameObject);
+                }
             }
             
             if (other.collider.CompareTag("Prize"))
