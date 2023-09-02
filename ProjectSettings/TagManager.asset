@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GameS
   - Obstacle
+  - Prize
   layers:
   - Default
   - TransparentFX

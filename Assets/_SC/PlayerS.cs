@@ -67,6 +67,12 @@ namespace _SC
                 deathSound.Invoke();
                 StartCoroutine(LoseGame());
             }
+            
+            if (other.collider.CompareTag("Prize"))
+            {
+                _gameS.gameObject.GetComponent<PrizeSpawn>().playerHasBeenPrize = true;
+                Destroy(other.gameObject);
+            }
         }
 
         private IEnumerator LoseGame()

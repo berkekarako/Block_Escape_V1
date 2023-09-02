@@ -10,6 +10,12 @@ namespace _SC
             
         private void OnCollisionEnter2D(Collision2D other)
         {
+            if (other.gameObject.CompareTag("Prize"))
+            {
+                Destroy(other.gameObject);
+            }
+            
+            if(!other.gameObject.CompareTag("Obstacle")) return;
             destroyObjNumber++;
             other.gameObject.SetActive(false);
             

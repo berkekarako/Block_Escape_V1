@@ -109,7 +109,7 @@ namespace _SC
         
         public void TryNextLvl(int destroyObjNumber)
         {
-            nextLvlPercent = (float)destroyObjNumber * 100 / maxEnemyNumber;
+            nextLvlPercent = (float)destroyObjNumber * 100 / (int)maxEnemyNumber;
             //nextLvlText.text = numberNextLvl.ToString(CultureInfo.InvariantCulture) + "%";
             print(nextLvlPercent);
 
