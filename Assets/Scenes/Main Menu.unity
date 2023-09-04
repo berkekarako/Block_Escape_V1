@@ -2208,8 +2208,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40e8556bec0d8be429bbf9d05810b086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeSprites: []
-  changeImageSprites: []
+  changeSprites:
+  - obj: {fileID: 0}
+    sprite1: {fileID: 0}
+    sprite2: {fileID: 0}
+  changeImageSprites:
+  - obj: {fileID: 0}
+    sprite1: {fileID: 0}
+    sprite2: {fileID: 0}
 --- !u!1 &1931304790
 GameObject:
   m_ObjectHideFlags: 0
