@@ -28,8 +28,6 @@ namespace _SC
         [Header("Objects")]
         public List<GameObject> columns;
         public DestroyObstacle destroyObstacle;
-        public List<GameObject> activeEnemy;
-        public List<GameObject> notActiveEnemy;
         public float maxEnemyNumber = 10;
         public float usedEnemyNumber;
         
@@ -46,13 +44,6 @@ namespace _SC
         {
             Time.timeScale = 1;
             player.transform.position = new Vector3(2.5f, -5.625f, 0);
-
-            for (int i = 0; i < 125; i++)
-            {
-                GameObject newEnemy = Instantiate(enemyPref);
-                notActiveEnemy.Add(newEnemy);
-                newEnemy.SetActive(false);
-            }
         }
 
         public void ColumAdd()
@@ -95,11 +86,7 @@ namespace _SC
             if ((int)maxEnemyNumber >= usedEnemyNumber + 1)
             {
                 usedEnemyNumber++;
-                GameObject usedObstacle = notActiveEnemy[0];
-                usedObstacle.SetActive(true);
-                
-                notActiveEnemy.RemoveAt(0);
-                activeEnemy.Add(usedObstacle);
+                GameObject usedObstacle = Instantiate(enemyPref);
 
                 usedObstacle.GetComponent<SpriteRenderer>().sprite = enemySprites[Random.Range(0, enemySprites.Count - 1)];
 
@@ -129,11 +116,6 @@ namespace _SC
                 destroyObstacle.destroyObjNumber = 0;
                 nextLvlNumber = 1;
                 nextLvlImage.sprite = defaultUploadSprites;
-
-                for (int j = 0; j < notActiveEnemy.Count; j++)
-                {
-                    notActiveEnemy[j].GetComponent<Skeleton>().Skeletonn();
-                }
             }
         }
 

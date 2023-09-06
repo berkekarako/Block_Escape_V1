@@ -1,13 +1,15 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace _SC
 {
     public class PlayerS : MonoBehaviour
     {
-        public GameObject normalMenu;
+        public List<GameObject> normalMenuButtons;
         public UnityEvent deathSound;
         
         public DestroyObstacle destroyObstacle;
@@ -65,7 +67,10 @@ namespace _SC
                     PlayerPrefs.SetFloat("LvlNext", _gameS.nextLvlPercent);
 
                     GetComponent<Animator>().SetTrigger("death");
-                    normalMenu.SetActive(false);
+                    foreach (var normalMenuButton in normalMenuButtons)
+                    {
+                        normalMenuButton.GetComponent<Button>().enabled = false;
+                    }
                     Time.timeScale = 0;
                     Camera.main.GetComponent<AudioSource>().mute = true;
                     deathSound.Invoke();

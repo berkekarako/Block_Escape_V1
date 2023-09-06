@@ -22,10 +22,7 @@ namespace _SC
         public void EnemyHit(GameObject enemy)
         {
             destroyObjNumber++;
-            enemy.SetActive(false);
-            
-            games.notActiveEnemy.Add(enemy);
-            games.activeEnemy.Remove(enemy);
+            Destroy(enemy.gameObject);
             
             games.TryNextLvl(destroyObjNumber);
         }
