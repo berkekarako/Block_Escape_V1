@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9008f789a02bdc948804c6958d1da79a
+guid: eb872c4b61c4fd44d81a1ecd6f179916
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,10 +9,10 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Gluten
+  - Filepile
   fallbackFontReferences: []
   customCharacters: 
-  fontRenderingMode: 0
+  fontRenderingMode: 2
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1

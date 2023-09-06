@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b617f52024f725e4799e7e9d24c0826c
+guid: 52a7e15ddbdd8864faa1153285e4b290
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Space Grotesk
+  - Spaceboy
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

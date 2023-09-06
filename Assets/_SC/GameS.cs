@@ -5,6 +5,7 @@ using Random = UnityEngine.Random;
 using TMPro;
 using UnityEngine.Serialization;
 using Image = UnityEngine.UI.Image;
+using UnityEngine.UI;
 
 namespace _SC
 {
@@ -17,6 +18,7 @@ namespace _SC
         
         [Header("UI")]
         public TextMeshProUGUI scoreText;
+        public Text scoreText_1;
         public Image nextLvlImage;
         public List<Sprite> uploadSprites;
         public Sprite defaultUploadSprites;
@@ -85,6 +87,7 @@ namespace _SC
             player.transform.localScale /= shrinkageX;
 
             scoreText.text = (numberOfColumns - 1).ToString(CultureInfo.InvariantCulture);
+            scoreText_1.text = (numberOfColumns - 1).ToString(CultureInfo.InvariantCulture);
         }
         
         public void SpawnEnemy()
