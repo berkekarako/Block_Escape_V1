@@ -11,7 +11,7 @@ namespace _SC.Other
         void Start()
         {
             float score =  (PlayerPrefs.GetInt("Lvl") * 100 + PlayerPrefs.GetFloat("LvlNext")) - 100;
-            scoreText.text = score.ToString(CultureInfo.InvariantCulture);
+            scoreText.text = ((int)score).ToString(CultureInfo.InvariantCulture);
         }
     }
 }

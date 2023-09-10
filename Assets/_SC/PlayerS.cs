@@ -13,6 +13,8 @@ namespace _SC
         public UnityEvent deathSound;
         
         public DestroyObstacle destroyObstacle;
+
+        public AudioSource musicController;
         
         private GameS _gameS;
         
@@ -71,9 +73,12 @@ namespace _SC
                     {
                         normalMenuButton.GetComponent<Button>().enabled = false;
                     }
+                    
                     Time.timeScale = 0;
-                    Camera.main.GetComponent<AudioSource>().mute = true;
+                    
+                    musicController.mute = true;
                     deathSound.Invoke();
+                    
                     StartCoroutine(LoseGame());
                 }
                 else

@@ -12,7 +12,6 @@ namespace _SC
         private float _x;
 
         private int _difficultyNumber;
-        public TextMeshProUGUI fpsText;
         
         private void Start()
         {
@@ -30,7 +29,7 @@ namespace _SC
                 _gameS.SpawnEnemy();
             }
             
-            fpsText.text = (1 / Time.deltaTime).ToString("F0");
+            //fpsText.text = (1 / Time.deltaTime).ToString("F0");
         }
 
         public void MakeGameHarder()
