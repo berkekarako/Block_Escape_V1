@@ -92,7 +92,12 @@ namespace _SC
             if (other.collider.CompareTag("Prize"))
             {
                 _gameS.gameObject.GetComponent<PrizeSpawn>().playerHasBeenPrize = true;
-                Destroy(other.gameObject);
+                var prizes = GameObject.FindGameObjectsWithTag("Prize");
+
+                for (int i = 0; i < prizes.Length; i++)
+                {
+                    Destroy(prizes[i].gameObject);
+                }
             }
         }
 

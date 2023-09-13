@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
@@ -11,6 +12,12 @@ namespace _SC
 {
     public class GameS : MonoBehaviour
     {
+        [Serializable] public struct AllEnemies
+        {
+            public GameObject enemy;
+            public int probability;
+        }
+        
         public GameObject player;
         public GameObject columnPref;
         public float numberOfColumns = 2; // Aralardaki Boşluk Sayısı
@@ -37,13 +44,23 @@ namespace _SC
         public LayerMask pausedCullingMask;
         
         [Header("Enemy")]
-        public GameObject enemyPref;
-        public List<Sprite> enemySprites;
+        public List<AllEnemies> allEnemies = new();
+        private List<GameObject> _enemiesProbability = new();
+        
+        //public List<Sprite> enemySprites;
 
         private void Start()
         {
             Time.timeScale = 1;
             player.transform.position = new Vector3(2.5f, -5.625f, 0);
+
+            for (int i = 0; i < allEnemies.Count; i++)
+            {
+                for (int j = 0; j < allEnemies[i].probability; j++)
+                {
+                    _enemiesProbability.Add(allEnemies[i].enemy);
+                }
+            }
         }
 
         public void ColumAdd()
@@ -86,16 +103,24 @@ namespace _SC
             if ((int)maxEnemyNumber >= usedEnemyNumber + 1)
             {
                 usedEnemyNumber++;
-                GameObject usedObstacle = Instantiate(enemyPref);
-
-                usedObstacle.GetComponent<SpriteRenderer>().sprite = enemySprites[Random.Range(0, enemySprites.Count - 1)];
+                
+                SpawnRandomEnemy(out GameObject usedObstacle);
 
                 float randomNumber = Random.Range(0, (int)numberOfColumns);
-
                 float targetVec = 10 / numberOfColumns / 2 + randomNumber * 10 / numberOfColumns;
 
                 usedObstacle.transform.position = new Vector3(targetVec, Random.Range(11f, 20f), 0);
             }
+        }
+
+        private void SpawnRandomEnemy(out GameObject usedObstacle)
+        {
+            var randomNumber = Random.Range(0, _enemiesProbability.Count);
+            var obstacle = Instantiate(_enemiesProbability[randomNumber]);
+            
+            obstacle.GetComponent<Enemies>().ChangeSprite();
+            
+            usedObstacle = obstacle;
         }
         
         public void TryNextLvl(int destroyObjNumber)
