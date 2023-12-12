@@ -17,6 +17,8 @@ namespace _SC
         {
             _gameS = GameObject.FindWithTag("GameS").GetComponent<GameS>();
             _difficultyNumber = PlayerPrefs.GetInt("Difficulty");
+            
+            GameS.MakeGameHarderEvent += MakeGameHarder;
         }
 
         private void Update()

@@ -12,6 +12,9 @@ namespace _SC
 {
     public class GameS : MonoBehaviour
     {
+        public delegate void MakeGameHarderHandler();
+        public static event MakeGameHarderHandler MakeGameHarderEvent;
+        
         [Serializable] public struct AllEnemies
         {
             public GameObject enemy;
@@ -46,8 +49,11 @@ namespace _SC
         [Header("Enemy")]
         public List<AllEnemies> allEnemies = new();
         private List<GameObject> _enemiesProbability = new();
-        
-        //public List<Sprite> enemySprites;
+
+        private void Awake()
+        {
+            MakeGameHarderEvent = null;
+        }
 
         private void Start()
         {
@@ -89,8 +95,7 @@ namespace _SC
             usedEnemyNumber = 0;
 
             // Diğer Ayarlar
-            GetComponent<ObstacleSettings>().MakeGameHarder();
-            GetComponent<PrizeSpawn>().MakeGameHarder();
+            MakeGameHarderEvent?.Invoke();
 
             player.transform.localScale /= shrinkageX;
 

@@ -22,6 +22,8 @@ namespace _SC
         private void Start()
         {
             Invoke(nameof(TrySpawnPrize), 1);
+            
+            GameS.MakeGameHarderEvent += MakeGameHarder;
         }
 
         private void TrySpawnPrize()
